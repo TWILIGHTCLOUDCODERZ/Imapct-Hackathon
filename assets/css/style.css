@@ -1601,7 +1601,7 @@ div[role="status"]{
     position: fixed;
     bottom: 20px;
     right: 8px;
-    width: 300px;
+    width: 80px;
     z-index: 9999;
   }
   
