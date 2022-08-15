@@ -1583,8 +1583,8 @@ div[role="status"]{
   position: fixed;
   height: calc(100% - 205px);
   z-index: 9999;
-  width: 300px;
-  top: 100px;
+  width: 350px;
+  top: 120px;
   overflow: hidden;
 }
 
