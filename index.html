@@ -17,11 +17,31 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
+  <!--==========================
+  Popup
+  ============================-->
+<div class="l_c_h">
+	<div class="c_h">
+    	<div class="left_c">
+            <div class="left right_c left_icons">
+                   <a href="#" class="mini" style="font-size:18px;">+</a>
+            </div>
+            <div class="left center_icons"><!--center_icons-->
+                 Chat with us!
+            </div><!--end center_icons-->        	
+        </div>
+        <div class="right right_c" style="width:35px;">
+        	<a href="#" class="logout" title="End chat" name="" style="display:none;"><img src="chat/logout.png"></a>        	
+        </div>
+        <div class="clear"></div>
+    </div>
+        <div class="chat_container" style="display: none;">
+            <iframe src="https://web.powerva.microsoft.com/environments/3f9b7143-54bd-e36b-9e20-d8b2d8c5ca0f/bots/new_bot_402ccf8ddec04eb891897f5eb6539ed0/webchat" style="height:450px"></iframe>
+        </div>
+</div>
 <body>
   <section id="hero">
-   
     <div class="hero-container">
-    
      <img src="assets/img/Raptor/RAPTORBG.png" alt="" class="img-fluid">
       <h1 data-aos="zoom-in">Raptor Healthcare Hospital</h1>
       <h2 data-aos="fade-up">Trust us we take Care Of Your Family's Health </h2>
@@ -29,54 +49,6 @@
   </section>
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-<button onclick="openChat()" role="openchatbutton" class="open-button">Chat</button>
-<div role="openchat" class="chat-popup" style="order: 3; position: relative; width: 400px; min-width: 400px; height: 100%;">
-  <div>
-    <div role="main"></div>
-  </div>
-  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
-  <script>
-    document.querySelectorAll('[role="main"]')[0].setAttribute("id", "webchat");
-    document.querySelectorAll('[role="openchat"]')[0].setAttribute("id", "chatWindow");
-    document.querySelectorAll('[role="openchatbutton"]')[0].setAttribute("id", "chatbutton");
-    const styleOptions = {
-      // Add styleOptions to customize web chat canvas
-      hideUploadButton: true,
-      // Optional - do not include if you don't want to overwrite framework's images
-      botAvatarImage: 'https://docs.microsoft.com/en-us/azure/bot-service/v4sdk/media/logo_bot.svg',
-      // Optional - do not include if you don't want to overwrite framework's images
-      userAvatarImage: 'https://cci-prod-botdesigner.azureedge.net/20200326.4/img/ef9b3564120c0823ad37d8f61b098698.svg'
-    };
-    // Add your BOT ID below
-    var BOT_ID = "402ccf8d-dec0-4eb8-9189-7f5eb6539ed0";
-    var theURL = "https://powerva.microsoft.com/api/botmanagement/v1/directline/directlinetoken?botId=" + BOT_ID;
-    fetch(theURL)
-      .then(response => response.json())
-      .then(conversationInfo => {
-        window.WebChat.renderWebChat({
-            directLine: window.WebChat.createDirectLine({
-              token: conversationInfo.token,
-            }),
-            styleOptions
-          },
-          document.getElementById('webchat')
-        );
-      })
-      .catch(err => console.error("An error occurred: " + err));
-  </script>
-     <script>
-    function openChat() {
-      var chatWindowElement = document.getElementById("chatWindow");
-      if (window.getComputedStyle(chatWindowElement).display === "none") {
-        document.getElementById("chatWindow").style.display = "block";
-        document.getElementById("chatbutton").innerHTML = "Close";
-      } else {
-        document.getElementById("chatWindow").style.display = "none";
-        document.getElementById("chatbutton").innerHTML = "Chat";
-      }
-    }
-  </script>
-</div>
       <div class="logo">
         <a href="index.html"><img src="assets/img/Raptor/RaptorLOGO.png" alt="" class="img-fluid"></a>
       </div>
@@ -93,9 +65,6 @@
   <main id="main">
     <section id="about" class="about">
       <div class="container">
-         <!--==========================
-  Popup
-  ============================-->
         <div class="section-title" data-aos="fade-up">
           <h2>Welcome to Raptor Healthcare Hospital</h2>
           <p>Most Valuable Thing is Your Health </p>
@@ -133,10 +102,8 @@
 
       </div>
     </section>
-    <section id="featured" class="featured">
-     
+    <section id="featured" class="featured">   
       <div class="container">
-
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
             <div class="tab-content">
@@ -274,15 +241,35 @@ Providing friendly & caring dentistry with our unique best Dental services</p>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+   <script src="assets/js/custom.js"></script>
+   
+   
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/add/custom.js"></script>
+     <script src="assets/add/main.js"></script>
+       <script src="assets/add/jquery.waypoints.min.js"></script>
+<script src="assets/add/lib/jquery/jquery.min.js"></script>
+ <!-- add Template Main JS File -->
+  
+  <script src="assets/add/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/add/lib/superfish/hoverIntent.js"></script>
+  <script src="assets/add/lib/superfish/superfish.min.js"></script>
+  <script src="assets/add/lib/morphext/morphext.min.js"></script>
+  <script src="assets/add/lib/wow/wow.min.js"></script>
+  <script src="assets/add/lib/stickyjs/sticky.js"></script>
+  
+  <script src="assets/add/js/custom.js"></script>
+  <script src="assets/add/contactform/contactform.js"></script>
 </body>
 
 </html>
