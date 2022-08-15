@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Raptor-Healthcare</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/Raptor/RaptorLOGO.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <section id="hero">
+   
+    <div class="hero-container">
+    
+     <img src="assets/img/Raptor/RAPTORBG.png" alt="" class="img-fluid">
+      <h1 data-aos="zoom-in">Raptor Healthcare Hospital</h1>
+      <h2 data-aos="fade-up">Trust us we take Care Of Your Family's Health </h2>
+    </div>
+  </section>
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+<button onclick="openChat()" role="openchatbutton" class="open-button">Chat</button>
+<div role="openchat" class="chat-popup" style="order: 3; position: relative; width: 400px; min-width: 400px; height: 100%;">
+  <div>
+    <div role="main"></div>
+  </div>
+  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+  <script>
+    document.querySelectorAll('[role="main"]')[0].setAttribute("id", "webchat");
+    document.querySelectorAll('[role="openchat"]')[0].setAttribute("id", "chatWindow");
+    document.querySelectorAll('[role="openchatbutton"]')[0].setAttribute("id", "chatbutton");
+    const styleOptions = {
+      // Add styleOptions to customize web chat canvas
+      hideUploadButton: true,
+      // Optional - do not include if you don't want to overwrite framework's images
+      botAvatarImage: 'https://docs.microsoft.com/en-us/azure/bot-service/v4sdk/media/logo_bot.svg',
+      // Optional - do not include if you don't want to overwrite framework's images
+      userAvatarImage: 'https://cci-prod-botdesigner.azureedge.net/20200326.4/img/ef9b3564120c0823ad37d8f61b098698.svg'
+    };
+    // Add your BOT ID below
+    var BOT_ID = "402ccf8d-dec0-4eb8-9189-7f5eb6539ed0";
+    var theURL = "https://powerva.microsoft.com/api/botmanagement/v1/directline/directlinetoken?botId=" + BOT_ID;
+    fetch(theURL)
+      .then(response => response.json())
+      .then(conversationInfo => {
+        window.WebChat.renderWebChat({
+            directLine: window.WebChat.createDirectLine({
+              token: conversationInfo.token,
+            }),
+            styleOptions
+          },
+          document.getElementById('webchat')
+        );
+      })
+      .catch(err => console.error("An error occurred: " + err));
+  </script>
+     <script>
+    function openChat() {
+      var chatWindowElement = document.getElementById("chatWindow");
+      if (window.getComputedStyle(chatWindowElement).display === "none") {
+        document.getElementById("chatWindow").style.display = "block";
+        document.getElementById("chatbutton").innerHTML = "Close";
+      } else {
+        document.getElementById("chatWindow").style.display = "none";
+        document.getElementById("chatbutton").innerHTML = "Chat";
+      }
+    }
+  </script>
+</div>
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/Raptor/RaptorLOGO.png" alt="" class="img-fluid"></a>
+      </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About us</a></li>
+          <li><a class="nav-link scrollto" href="https://forms.office.com/r/0iFcEWpMBM">Event</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container">
+         <!--==========================
+  Popup
+  ============================-->
+        <div class="section-title" data-aos="fade-up">
+          <h2>Welcome to Raptor Healthcare Hospital</h2>
+          <p>Most Valuable Thing is Your Health </p>
+        </div>
+
+        <div class="row">
+         
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="image">
+              <img src="assets/img/Raptor/imgraptor.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 ">
+              <h3>Raptor Healthcare Hospital</h3>
+              <p class="fst-italic">
+             Hospital is the foremost premier hospital in a area developed to deliver ethical medical service to the people. The prime doctors available there are Dr.S.Jim  DGO.,kim(Obstetrician & Gynaecologist & Infertility Specialist ) and Dr.timothyMS.,MCh ( Urologist & Andrologist ). Other Speciality doctors are available on call and prior appointments. Our motto is  Cure with Care . Do Trust Us.. 
+              </p>
+              <ul>
+<h3>Department</h3>
+                <li><i class="bx bx-check-double"></i> Neurology</li>
+                <li><i class="bx bx-check-double"></i> Ophthalmology</li>
+                <li><i class="bx bx-check-double"></i> Nuclear Magnetic</li>
+<li><i class="bx bx-check-double"></i> X-Ray</li>
+<li><i class="bx bx-check-double"></i> Cardiology</li>
+<li><i class="bx bx-check-double"></i> Surgical</li>
+<li><i class="bx bx-check-double"></i> Dental Clinic</li>
+              </ul>
+              <p>
+                Caring for better life-Leading the way in medical excellence-Earth greater grass for good. Place for divide evening yielding them that. Creeping beginning over gathered brought.
+              </p> 
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="featured" class="featured">
+     
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <figure>
+                  <img src="assets/img/Raptor/Cardiology.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <figure>
+                  <img src="assets/img/Raptor/Dental%20clinic.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <figure>
+                  <img src="assets/img/Raptor/Neurosurgery.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <figure>
+                  <img src="assets/img/Raptor/ophthalmology.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+ <div class="tab-pane" id="tab-5">
+                <figure>
+                  <img src="assets/img/Raptor/x-ray.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                  <h4>Cardiology</h4>
+                  <p>Heart and Heartbeat Cardiology</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                  <h4>Dental clinic</h4>
+                  <p>
+Providing friendly & caring dentistry with our unique best Dental services</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                  <h4>Neurosurgery</h4>
+                  <p> Trained medical doctor who diagnoses and treats conditions that affect your nervous system</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                  <h4>Ophthalmology</h4>
+                  <p>We care for patients eye conditions</p>
+                </a>
+              </li>
+               <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">
+                  <h4>x-ray</h4>
+                  <p>Healthcare providers use chest X-rays to diagnose or treat conditions like pneumonia, emphysema or COPD.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+    <!-- ======= video ======= -->
+    <div class="section-title" data-aos="fade-up">
+          <h2>Raptor ENVIRONMENTAL DAY EVENT</h2>
+        </div>
+    <section id="why-us" class="why-us">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-7 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-stretch">
+            <div class="content" data-aos="fade-up">
+              <h3> <strong>Raptor ENVIRONMENTAL DAY</strong></h3>
+          <h2>SAVE EARTH BY PLANTING TREES</h2>
+             <p>Trees produces oxygen that is life line of all living beings. In the hot summer we usually plan trips in the hilly areas. But if the rate of cutting Trees remains same then we don’t have enough Trees to plan a trip, seasonal raining and amount of fresh oxygen will no longer be available. Trees helps to clean the air, soil and water,  making the earth a beautiful livable place. Living close to trees makes us healthier and happier. Its time to SAVE Trees, protect forests and spread awareness. If you want to save trees, you can help by protecting those that grow around your home, and planting more Trees. Reduce the use of  paper products, too</p>
+              <ul>
+               <strong>Join Event</strong>: <a href="https://forms.office.com/r/0iFcEWpMBM">LINK</a>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 align-items-stretch video-box" style='background-image: url("assets/img/Raptor/RAPTORBG.png");' data-aos="zoom-in">
+            <a href="https://youtu.be/FnjfyLDPzuI" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End video-->
+     <!-- ======= DATA TRANSFORM ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+<div class="section-title" data-aos="fade-up">
+          <h2>EVENT PARTICIPANTS DATA </h2>
+          <p>SAVE EARTH BY PLANTING TREES</p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+                <iframe title="raptor - Page 1" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZWQzOTAyM2ItZmM4NS00ZWMxLTgyYTItYjFmNGE1NDU1YTdiIiwidCI6ImE4MWM2Nzc4LTUwZmQtNDQyOS1hMWQwLTRiODQyZGE2MmRkYSJ9" frameborder="0" allowFullScreen="true"></iframe>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>ENVIRONMENTAL DAY EVENT</h3>
+              <ul>
+                  <P>Trees produces oxygen that is life line of all living beings. In the hot summer we usually plan trips in the hilly areas. But if the rate of cutting Trees remains same then we don’t have enough Trees to plan a trip, seasonal raining and amount of fresh oxygen will no longer be available. Trees helps to clean the air, soil and water,  making the earth a beautiful livable place. Living close to trees makes us healthier and happier. Its time to SAVE Trees, protect forests and spread awareness. If you want to save trees, you can help by protecting those that grow around your home, and planting more Trees. Reduce the use of  paper products, too.</P>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End DATA TRANSFORM -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <a href="#header" class="scrollto footer-logo"><img src="assets/img/Raptor/RaptorLOGO.png" alt=""></a>
+          </div>
+        </div>       
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
