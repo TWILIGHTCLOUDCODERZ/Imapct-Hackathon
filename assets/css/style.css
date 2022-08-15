@@ -1583,8 +1583,8 @@ div[role="status"]{
   position: fixed;
   height: calc(100% - 205px);
   z-index: 9999;
-  width: 400px;
-  top: 130px;
+  width: 300px;
+  top: 100px;
   overflow: hidden;
 }
 
@@ -1599,9 +1599,9 @@ div[role="status"]{
     cursor: pointer;
     opacity: 0.8;
     position: fixed;
-    bottom: 23px;
+    bottom: 20px;
     right: 8px;
-    width: 400px;
+    width: 300px;
     z-index: 9999;
   }
   
